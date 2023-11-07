@@ -25,15 +25,18 @@ namespace Ejercicio_2
             double coste;
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
+
             // telegrama urgente?
             if (cbUrgente.Checked)
                 tipoTelegrama = 'u';
-            //Obtengo el número de palabras que forma el telegrama
-            numPalabras = textoTelegrama.Length;
+            else
+                tipoTelegrama = 'o';
+            //Obtengo el número de palabras que forma el telegrama 
+            numPalabras = textoTelegrama.Split(' ').Length;
             //Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 25;
+                    coste = 2.5;
                 else
                     coste = 0.5 * numPalabras;
             else
@@ -46,7 +49,6 @@ namespace Ejercicio_2
             else
                 coste = 0;
             txtPrecio.Text = coste.ToString() + " euros";
-
         }
     }
 }
