@@ -25,6 +25,7 @@ namespace Ejercicio_2
             double coste;
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
+
             // telegrama urgente?
             if (rdUrgente.Checked)
             {
@@ -42,11 +43,11 @@ namespace Ejercicio_2
                 if (numPalabras <= 10)
                     coste = 2.5;
                 else
-                    coste = 2.5 + (0.5 * (numPalabras - 10));
-            }
-
-            else if (tipoTelegrama == 'u')
-            {
+                    coste = 0.5 * numPalabras;
+            else
+            //Si el telegrama es urgente
+            //A partir de este punto lo hace Rodrigo
+            if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
                     coste = 5;
                 else
@@ -57,7 +58,6 @@ namespace Ejercicio_2
                 coste = 0;
             }
             txtPrecio.Text = coste.ToString() + " euros";
-
         }
     }
 }
