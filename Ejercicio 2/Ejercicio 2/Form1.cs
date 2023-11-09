@@ -33,7 +33,7 @@ namespace Ejercicio_2
                 tipoTelegrama = 'o';
             //Obtengo el número de palabras que forma el telegrama 
             numPalabras = textoTelegrama.Split(' ').Length;
-            //Si el telegrama es ordinario
+            //Si el telegrama es ordinario 
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
                     coste = 2.5;
@@ -41,6 +41,7 @@ namespace Ejercicio_2
                     coste = 0.5 * numPalabras;
             else
             //Si el telegrama es urgente
+            //A partir de este punto lo hace Rodrigo
             if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
                     coste = 5;
