@@ -41,6 +41,7 @@ namespace Ejercicio_2
                     coste = 0.5 * numPalabras;
             else
             //Si el telegrama es urgente
+            //A partir de este punto lo hace Rodrigo
             if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
                     coste = 5;
